@@ -1,2 +1,1 @@
-# rsschool-cv
-My CV
+[My CV](https://stad07.github.io/rsschool-cv/cv)
