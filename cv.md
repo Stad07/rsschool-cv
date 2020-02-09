@@ -26,22 +26,20 @@
 <div class="header-contacts">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
-		<div class="col-10 col-md-6 col-xl-4 text-left">
-			<i class="fa fa-location-arrow"></i> г. Ставрополь
-		</div>
-		<div class="col-10 col-md-6 col-xl-4 text-center">
-			<i class="fa fa-mobile"></i> +7 ( 928 ) 810-05-00 
-		</div>
-		<div class="d-none d-xl-block col-xl-4 text-right">
-			<i class="fa fa-clock-o"></i> Время работы: ежедневно с 10:00 - 20:00
-		</div>
+			<div class="col-10 col-md-6 col-xl-4 text-left">
+				<i class="fa fa-location-arrow"></i> г. Ставрополь
+			</div>
+			<div class="col-10 col-md-6 col-xl-4 text-center">
+				<i class="fa fa-mobile"></i> +7 ( 928 ) 810-05-00 
+			</div>
+			<div class="d-none d-xl-block col-xl-4 text-right">
+				<i class="fa fa-clock-o"></i> Время работы: ежедневно с 10:00 - 20:00
+			</div>
 		</div>
 	</div>
 </div> 	      
 ```
-
 > SASS/CSS
-
 ```
 .carousel-services
 	background-color: $dark
@@ -83,9 +81,7 @@
 		.owl-next
 			right: 0
 ```
-
 > JQUERY
-
 ```
 $("form.callback").submit(function() { //Change
 	var th = $(this);
@@ -104,9 +100,7 @@ $("form.callback").submit(function() { //Change
 	return false;
 });
 ```
-
 > JavaScript
-
 ```
 class Clock {
 	constructor({ template }) {
