@@ -21,6 +21,7 @@
 5. **Code examples**:
 
 > HTML
+
 ```
 <div class="header-contacts">
 	<div class="container">
@@ -40,6 +41,7 @@
 ```
 
 > SASS/CSS
+
 ```
 .carousel-services
 	background-color: $dark
@@ -83,6 +85,7 @@
 ```
 
 > JQUERY
+
 ```
 $("form.callback").submit(function() { //Change
 	var th = $(this);
@@ -103,6 +106,7 @@ $("form.callback").submit(function() { //Change
 ```
 
 > JavaScript
+
 ```
 class Clock {
 	constructor({ template }) {
