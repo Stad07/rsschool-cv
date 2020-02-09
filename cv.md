@@ -21,18 +21,7 @@
 5. **Code examples**:
 
 > HTML
-
 ```
-<div class="header-social">
-	<nav class="soc">
-		<ul>
-			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			<li><a href="#"><i class="fa fa-vk"></i></a></li>
-		</ul>
-	</nav>
-</div>
-
 <div class="header-contacts">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
@@ -51,7 +40,6 @@
 ```
 
 > SASS/CSS
-
 ```
 .carousel-services
 	background-color: $dark
@@ -95,7 +83,6 @@
 ```
 
 > JQUERY
-
 ```
 $("form.callback").submit(function() { //Change
 	var th = $(this);
@@ -115,9 +102,52 @@ $("form.callback").submit(function() { //Change
 });
 ```
 
+> JavaScript
+```
+class Clock {
+	constructor({ template }) {
+		this.template = template
+	}
+
+	render() {
+		let date = new Date();
+
+		let hours = date.getHours();
+		if(hours < 10) hours = '0' + hours;
+
+		let mins = date.getMinutes();
+		if(mins < 10) mins = '0' + mins;
+
+		let secs = date.getSeconds();
+		if(secs < 10) secs = '0' + secs;
+
+		let output = this.template
+			.replace('h', hours)
+			.replace('m', mins)
+			.replace('s', secs);
+
+		console.log(output);	
+	}
+
+	stop() {
+		clearInterval(this.timer);
+	}
+
+	start() {
+		this.render();
+		this.timer = setInterval(() => this.render(), 1000);
+	}
+}
+
+let clock = new Clock({template: 'h:m:s'});
+clock.start();
+	
+setTimeout(() => clock.stop(), 5000);
+```
+
 6. **Experience**:
 	* [coding tests] - from site [learn.javascript](https://learn.javascript.ru/)
-	* [my individual projects] - self-study (2 years & 5 month)
+	* [my individual projects] - self-study (2 years & 6 month)
 
 7. **Education**:
 	books, video lectures, online learning  
