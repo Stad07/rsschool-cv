@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <h1>This is my CV.</h1>
+    <div class="img-wrap">
+      <img src="https://avatars2.githubusercontent.com/u/49105636?s=460&v=4" alt="my-photo">
+    </div>       
+    <ol>
+      <li>
+        <strong>First Name</strong>: Stanislav, <strong>Last Name</strong>: Dobrovolskiy
+      </li>
+      <li>
+        <strong>Contact Info</strong>: 
+        <p>[email] - stad-777@yandex.ru</p>
+        <p>[telephone] - 8-928-810-05-00</p>
+      </li>
+      <li>
+        <strong>Summary</strong>: 
+        <p>[my goal] - I want to be a frontend developer.</p>
+        <p>[my wishes] - I want to work in a large IT-company, and transfer my knowledge and skills to other young and motivated people.</p>
+      </li>
+      <li>
+        <strong>Skills</strong>:
+        <p>[HTML]</p>
+        <p>[CSS]</p>
+        <p>[SASS]</p>
+        <p>[GULP]</p>
+        <p>[JavaScript]</p>
+        <p>[jQuery]</p>
+      </li>
+      <li>
+        <strong>Code examples</strong>:
+        <p>&gt; HTML</p>
+        <pre>
+          <code>
+  &lt;div class="header-social"&gt;
+    &lt;nav class="soc"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook">&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-instagram"&gt;&lt;/i&gt;&lt;/a>&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-vk">&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+
+  &lt;div class="header-contacts"&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="row justify-content-between align-items-center"&gt;
+        &lt;div class="col-10 col-md-6 col-xl-4 text-left"&gt;
+          &lt;i class="fa fa-location-arrow">&lt;/i&gt; г. Ставрополь
+        &lt;/div&gt;
+        &lt;div class="col-10 col-md-6 col-xl-4 text-center"&gt;
+          &lt;i class="fa fa-mobile">&lt;/i&gt; +7 ( 928 ) 810-05-00 
+        &lt;/div&gt;
+        &lt;div class="d-none d-xl-block col-xl-4 text-right"&gt;
+          &lt;i class="fa fa-clock-o"&gt;&lt;/i&gt; Время работы: ежедневно с 10:00 - 20:00
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+
+        <p>&gt; SASS/CSS</p>
+        <pre>
+          <code>
+  .carousel-services
+    background-color: $dark
+    position: relative	
+    width: 100%			
+    .owl-item
+      &:nth-child(2n+2)
+        .carousel-services-item
+          flex-direction: column
+      &-item
+        width: 100%
+        color: #fff
+        font-size: 1.125rem
+        font-weight: 300
+        position: relative
+        display: flex
+        flex-direction: column-reverse		
+        &:hover
+          .carousel-services-image
+            opacity: 1	    
+    .owl-nav
+      position: absolute
+      top: 0
+      width: 100%
+      &gt; button.owl-prev,
+      &gt; button.owl-next
+        width: 61px
+        height: 61px
+        line-height: 61px
+        display: block
+        background-color: rgba(#fff, 0.85)
+        color: $dark			
+        position: absolute
+        text-align: center
+        font-size: 28px
+        outline: none
+      .owl-prev
+        left: 0			
+      .owl-next
+        right: 0
+          </code>
+        </pre>
+
+        <p>&gt; JQUERY</p>
+        <pre>
+          <code>
+  $("form.callback").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      th.find('.success').addClass('active').css('display','flex').fadeIn();
+      setTimeout(function() {
+      // Done Functions
+        th.find('.success').removeClass('active').fadeOut();
+        th.trigger("reset");
+      }, 3000);
+    });
+
+    return false;
+  });
+          </code>
+        </pre>
+
+        <p>&gt; JavaScript</p>
+        <pre>
+          <code>
+  class Clock {
+    constructor({ template }) {
+      this.template = template
+    }
+            
+    render() {
+      let date = new Date();
+            
+      let hours = date.getHours();
+      if(hours < 10) hours = '0' + hours;
+            
+      let mins = date.getMinutes();
+      if(mins < 10) mins = '0' + mins;
+            
+      let secs = date.getSeconds();
+      if(secs < 10) secs = '0' + secs;
+           
+      let output = this.template
+        .replace('h', hours)
+        .replace('m', mins)
+        .replace('s', secs);
+            
+      console.log(output);	
+    }
+            
+    stop() {
+      clearInterval(this.timer);
+    }
+            
+    start() {
+      this.render();
+      this.timer = setInterval(() => this.render(), 1000);
+    }
+  }
+            
+  let clock = new Clock({template: 'h:m:s'});
+  clock.start();
+              
+  setTimeout(() => clock.stop(), 5000);
+          </code>
+        </pre>  
+      </li>
+      <li>
+        <strong>Experience</strong>: 
+        <p>[coding tests] - from site <a href="https://learn.javascript.ru">learn.javascript</a></p>
+        <p>[my individual projects] - self-study (2 years & 6 month)</p>
+      </li>
+      <li>
+        <strong>Education</strong>: 
+        <p>books, video lectures, online learning</p>
+      </li>
+      <li>
+        <strong>English</strong>: 
+        <p>I went to school with an advanced study of English, then University education,
+          sometimes watch English channels on TV.</p>
+      </li>		
+    </ol>
+
+  </div>
+        
+</body>
+</html>

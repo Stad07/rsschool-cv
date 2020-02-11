@@ -1,0 +1,38 @@
+#wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.img-wrap {
+  width: 150px;
+  height: 150px;
+  position: absolute;  
+  overflow: hidden;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+}
+
+.img-wrap img {
+  max-width: 100%;
+}
+
+li {
+  padding: 5px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  display: block;
+  width: 100%;
+  background-color: #F6F8FA;
+}
